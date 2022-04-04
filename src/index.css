@@ -1,11 +1,11 @@
-html,
+dhtml,
 body {
   margin: 0;
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #7700ee;
-  color: #fff;
+  background-color: #9d1919;
+  color: #ffde59;
   overflow-x: hidden;
 }
 #root {
