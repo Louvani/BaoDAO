@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Footer from './footer'
 
 // Import thirdweb provider and Rinkeby ChainId
 import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
