@@ -4,8 +4,8 @@ body {
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #9d1919;
-  color: #ffde59;
+  background-color: #a00000;
+  color: #f3e23e;
   overflow-x: hidden;
 }
 #root {
@@ -138,4 +138,70 @@ button:focus {
 button:disabled {
   opacity: 0.8;
   pointer-events: none;
+}
+
+
+
+.footer {
+  position: fixed;
+  padding: 10px 10px 10px 10px;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  text-align: center;
+}
+
+.daoLogo {
+  width: 20%;
+  height: auto;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+.membershipNFT {
+  width: 20%;
+  height: auto;
+  margin: auto;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid #f3e23e;
+  box-shadow: 3.1px 6.2px 6.2px hsl(0deg 0% 0% / 0.4);
+}
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  max-width: 100%;
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  z-index: 3;
+  background: transparent;
+}
+
+.header-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.wallet-conection {
+  background-color: #000;
+  border-radius: 25px;
+  padding: 5px;
+  font-size: small;
+  color: white;
+  height: 30px;
+  text-align: center;
+  line-height: 7px;
 }
