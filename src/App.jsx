@@ -1,9 +1,10 @@
-import { useAddress, useMetamask, useEditionDrop, useToken, useVote, useNetwork } from '@thirdweb-dev/react';
+import { useAddress, useMetamask, useEditionDrop, useToken, useVote, useNetwork, useDisconnect } from '@thirdweb-dev/react';
 import { useState, useEffect, useMemo } from 'react';
 import { AddressZero } from "@ethersproject/constants";
 import { ChainId } from '@thirdweb-dev/sdk';
 
 import Landing from './landing';
+import AsideMenu from './asideMenu';
 import MintNft from './mint-nft';
 import MemberList from './memberList';
 import ActiveProposals from './activeProposals';
@@ -14,6 +15,7 @@ const App = () => {
   const address = useAddress();
   const network = useNetwork();
   const connectWithMetamask = useMetamask();
+  const disconnectMetamask = useDisconnect();
   console.log("👋 Address: ", address);
 
   // Initialize our editionDrop contract
@@ -196,23 +198,24 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>Bao DAO Dashboard</h1>
-        <a href={openSeaLink}>
-        <img className='membershipNFT' alt='Membership NFT' src='https://ipfs.thirdweb.com/ipfs/QmUhQr4gMR1aavi6Wdps32omboUDVebitepVmR4ftxC2gx/0' />
-        </a>
-        <p>Congratulations on being a member</p>
-        <div>
-          <MemberList memberList={memberList} />
-          <ActiveProposals setIsVoting={setIsVoting}  proposals={proposals} setHasVoted={setHasVoted} isVoting={isVoting} hasVoted={hasVoted} token={token} vote={vote} address={address} AddressZero={AddressZero}  />
+        <AsideMenu address={address} openSeaLink={openSeaLink} disconnectMetamask={disconnectMetamask} />
+        <div className='main-content'>
+          <h1>Bao DAO Dashboard</h1>
+          <div className='dashboard'>
+            <MemberList memberList={memberList} />
+            <ActiveProposals setIsVoting={setIsVoting}  proposals={proposals} setHasVoted={setHasVoted} isVoting={isVoting} hasVoted={hasVoted} token={token} vote={vote} address={address} AddressZero={AddressZero}  />
+          </div>
         </div>
       </div>
     )
   }
 
   // Render mint nft screen.
-  return (
-    <MintNft isClaiming={isClaiming} mintNft={mintNft} />
-  );
+  if (!hasClaimedNFT){
+    return (
+      <MintNft isClaiming={isClaiming} mintNft={mintNft} />
+    );
+  }
 };
 
 export default App;
