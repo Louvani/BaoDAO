@@ -16,11 +16,11 @@ To get started with this project, clone this repo and follow these commands:
 2. Run `npm start` to start the project
 3. Start coding!
 
-### **Louvani**
-[Louvani](https://github.com/louvani)
-[Portfolio](https://louuvani.com)
-[twitter](https://twitter.com/PaulaLouvani)
-[linkedIn](https://www.linkedin.com/in/paula-louvani//)
-
+### **Author**
 Louvani is a Software Engineer passionate about challenges that allow me to keep growing by learning and experimenting with new technologies.
+- [Louvani](https://github.com/louvani)
+- [Portfolio](https://louuvani.com)
+- [twitter](https://twitter.com/PaulaLouvani)
+- [linkedIn](https://www.linkedin.com/in/paula-louvani//)
+
 
